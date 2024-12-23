@@ -1,6 +1,5 @@
 streamlit
 shap
-pickle
 pandas
 numpy
 matplotlib
