@@ -45,9 +45,9 @@ if btn:
     res = model.predict(data)
     res_proba = model.predict_proba(data)
     if res[0]==1:
-        res = f"hemophagocytic lymphohistiocytosis(probability:{res_proba[1]})"
+        res = f"hemophagocytic lymphohistiocytosis(probability:{res_proba})"
     else:
-        res = f"infectious mononucleosis(probability:{res_proba[0]})"
+        res = f"infectious mononucleosis(probability:{res_proba})"
     st.markdown(f'''
         <div style="text-align: center;"><span style="background: #FF4B4B; color: white; padding: 0.3rem; padding-left: 1rem; padding-right: 1rem;">预测结果</span></div>
         <div style="font-size: 20px; text-align: center; border-radius: .5rem; margin-bottom: 1rem; padding: 1rem; border: 1px solid red;">
