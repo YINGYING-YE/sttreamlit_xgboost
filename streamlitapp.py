@@ -45,10 +45,10 @@ if btn:
     res = model.predict(data)
     res_proba = model.predict_proba(data)
     if res[0]==1:
-        p = round(res_proba[0][0], 3)
+        p = round(res_proba[0][1], 3)
         res = f"hemophagocytic lymphohistiocytosis(probability:{p})"
     else:
-        p = round(res_proba[0][1], 3)
+        p = round(res_proba[0][0], 3)
         res = f"infectious mononucleosis(probability:{p})"
     st.markdown(f'''
         <div style="text-align: center;"><span style="background: #FF4B4B; color: white; padding: 0.3rem; padding-left: 1rem; padding-right: 1rem;">预测结果</span></div>
